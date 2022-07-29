@@ -10,6 +10,12 @@ import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfil
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    base: "/js-issue-20220729/"
+  },
+  build: {
+    outDir: "docs/"
+  },
   plugins: [
 		vue(),
 		vuetify({ autoImport: true }),
